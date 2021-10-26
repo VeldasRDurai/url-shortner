@@ -18,11 +18,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const index = require('./routes/index');
 const create = require('./routes/create');
+const search = require('./routes/search');
+
+app.use('/public', express.static(path.join(__dirname, 'public')));
 
 app.use('/', index );
-app.use('/create', create );
+app.use('/create', create);
+app.use('/search', search);
+
 app.use('/', express.static(path.join(__dirname, 'public/index')));
 app.use('/create', express.static(path.join(__dirname, 'public/create')));
+app.use('/search', express.static(path.join(__dirname, 'public/search')));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

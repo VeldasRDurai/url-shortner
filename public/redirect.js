@@ -1,0 +1,1 @@
+const redirect = path => window.location.replace(`http://localhost:3000/${path}`);
