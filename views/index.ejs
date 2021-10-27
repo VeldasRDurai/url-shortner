@@ -1,9 +1,13 @@
 <%- include("head") %>
 <body>
     <link rel="stylesheet" href="/style.css">
-    <div id="content">
-        <button onClick="redirect('create')"> Create </button>
-        <button onClick="redirect('search')"> Search </button>
-    </div>
+    <input type="url" id="link" 
+        placeholder="Link to the page"  autocomplete="off"
+        oninput="search('LINK', this.value)" /> <br />
+    http://localhost:3000/
+    <input type="text" id="uniqueId" 
+        placeholder="Unique ID" autocomplete="off" disabled
+        oninput="search('UNIQUE-ID', this.value)" /> <br />
+    <input type="button" id="submit" value="submit" onclick="create()" disabled />
 </body>
 <%- include("tail") %>
