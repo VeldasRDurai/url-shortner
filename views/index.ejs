@@ -1,13 +1,24 @@
 <%- include("head") %>
 <body>
     <link rel="stylesheet" href="/style.css">
-    <input type="url" id="link" 
-        placeholder="Link to the page"  autocomplete="off"
-        oninput="search('LINK', this.value)" /> <br />
-    http://localhost:3000/
-    <input type="text" id="uniqueId" 
-        placeholder="Unique ID" autocomplete="off" disabled
-        oninput="search('UNIQUE-ID', this.value)" /> <br />
+    <div id="linkUrl" >
+        <input type="url" id="link" 
+            placeholder="Link to the page"  autocomplete="off" spellcheck="false"
+            oninput="search('LINK', this.value)" />
+        <div class="copy" onclick="copyToClipboard('LINK')" >
+            <%- include("copy") %>
+        </div>
+    </div>
+    <div id="uniqueIdUrl" >
+        <div id="uniqueIdPrefix" > http://localhost:3000/redirect/ </div> 
+        <input type="text" id="uniqueId"
+            placeholder="Unique ID" autocomplete="off" spellcheck="false" disabled
+            oninput="search('UNIQUE-ID', this.value)" /> <br />
+        <div class="copy" onclick="copyToClipboard('UNIQUE-ID')" >
+            <%- include("copy") %>
+        </div>
+    </div>
     <input type="button" id="submit" value="submit" onclick="create()" disabled />
+    <div id="result" ></div>
 </body>
 <%- include("tail") %>

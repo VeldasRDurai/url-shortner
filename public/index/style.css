@@ -1,4 +1,4 @@
-#content{
+/* #content{
     height:50vh;
     width: 25vw;
     display: flex;
@@ -6,14 +6,49 @@
     justify-content: space-around;
     align-items: center;
     background-color:blue;
-}
-/* #content button {
-    width: 50%;
-    cursor: pointer;
-    background-color:red;
-    padding: 10px;
-    color: black;
-    font-size:16px;
-    font-weight: 700;
-    border: none;
 } */
+input {
+    height:30px;
+    /* text-align: center; */
+    border: 1px solid #d0d7de;
+    border-radius: 5px;
+    background-color:whitesmoke;
+    font-size: 18px;
+    font-family: 'Inconsolata', monospace;
+}
+input:focus{
+    outline: none;
+}
+input[disabled] {
+    cursor: not-allowed;
+}
+#linkUrl {
+    display: flex;
+    align-items: center;
+}
+#linkUrl #link {
+    flex: auto;
+}
+#uniqueIdUrl {
+    display: flex;
+    align-items: center;
+}
+#uniqueIdUrl #uniqueIdPrefix {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inconsolata', monospace;
+    font-size: 20px;
+}
+#uniqueIdUrl #uniqueId {
+    flex: auto;
+}
+.copy{
+    fill : #2da44e;
+    cursor: pointer;
+    height: 30px;
+    display:none;
+    align-items: center;
+    margin-left:5px;
+}
